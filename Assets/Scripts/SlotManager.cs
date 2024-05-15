@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -10,12 +12,22 @@ public class SlotManager : MonoBehaviour
    
    private Slot[] _slots;
    private bool _isSpinning;
+   private float _winAmount;
+
+   private int[] _currentReelIndex; 
 
    private const string TotalWin = "Total Win: ";
+
+   private List<Spins> _spinsList = new List<Spins>();
 
    private void Awake()
    {
       _slots = GetComponentsInChildren<Slot>();
+   }
+
+   private void Start()
+   {
+      _spinsList = FileHandler.ReadFromJson<Spins>("spins.json");
    }
 
    public void SpinSlots()
@@ -25,21 +37,19 @@ public class SlotManager : MonoBehaviour
       
       //Reset Win Amount
       winTxt.text = TotalWin;
+
+      var index = 0;
       
       foreach (var slot in _slots)
       {
-         slot.StartSpin();
+         slot.StartSpin(index);
       }
-   }
-
-   private void GetSpinData()
-   {
       
    }
-   
-   
+
    private void DisplayWinAmount()
    {
+      winTxt.text = TotalWin + _winAmount;
       StartCoroutine(SpinCoolDown());
    }
 
@@ -47,5 +57,14 @@ public class SlotManager : MonoBehaviour
    {
       yield return new WaitForSeconds(spinCoolDownTime);
       _isSpinning = false; 
+   }
+
+
+   [Serializable]
+   private class Spins
+   {
+      public int[] ReelIndex;
+      public int ActiveReelCount;
+      public int WinAmount;
    }
 }

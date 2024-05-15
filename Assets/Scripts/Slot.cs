@@ -1,11 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-   
-   public void StartSpin()
+    private Image[] _images;
+    private int _currentIndex;
+    
+   public void StartSpin(int index)
    {
+       _currentIndex = index;
        StartCoroutine(Spin());
    }
 
