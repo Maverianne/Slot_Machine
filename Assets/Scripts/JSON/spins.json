@@ -1,0 +1,1804 @@
+{
+    "Spins": [
+        {
+            "ReelIndex": [
+                4,
+                4,
+                7
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 100
+        },
+        {
+            "ReelIndex": [
+                17,
+                2,
+                9
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                22,
+                18,
+                18
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                19,
+                16,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                18,
+                13
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                3,
+                15,
+                2
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                24,
+                21,
+                12
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                20,
+                14,
+                11
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                2,
+                6,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                20,
+                16,
+                3
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                20,
+                1
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                1,
+                5,
+                0
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                8,
+                9,
+                3
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                16,
+                3
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                11,
+                10,
+                9
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                18,
+                19,
+                24
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                20,
+                21,
+                5
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                3,
+                11,
+                14
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                10,
+                0,
+                11
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                16,
+                21,
+                19
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                20,
+                17,
+                19
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                17,
+                18,
+                17
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                14,
+                6,
+                24
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                0,
+                20,
+                4
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                2,
+                2,
+                1
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                17,
+                17,
+                6
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                18,
+                17,
+                6
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                7,
+                9,
+                2
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                18,
+                1,
+                5
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                26,
+                0,
+                10
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                21,
+                17,
+                2
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                12,
+                7,
+                6
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                7,
+                10,
+                15
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                24,
+                8,
+                10
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                24,
+                21,
+                15
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                21,
+                19,
+                9
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                1,
+                8,
+                6
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                16,
+                18,
+                24
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                15,
+                9
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                1,
+                20,
+                15
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                11,
+                19
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                9,
+                1,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                11,
+                22,
+                24
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                19,
+                12
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                8,
+                1,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                7,
+                5,
+                2
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 100
+        },
+        {
+            "ReelIndex": [
+                18,
+                18,
+                18
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                23,
+                16,
+                3
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                9,
+                19,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                14,
+                8,
+                4
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                21,
+                18,
+                13
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                16,
+                6,
+                19
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                4,
+                22,
+                22
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                0,
+                2,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                8,
+                23
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                15,
+                10,
+                5
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                3,
+                21,
+                12
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                21,
+                13,
+                18
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                21,
+                17,
+                21
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                22,
+                21,
+                3
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                25,
+                15,
+                11
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                3,
+                8,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                27,
+                0,
+                22
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                8,
+                2,
+                20
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                7,
+                0,
+                12
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                3,
+                0,
+                0
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 1000
+        },
+        {
+            "ReelIndex": [
+                26,
+                17,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                1,
+                12,
+                17
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 100
+        },
+        {
+            "ReelIndex": [
+                20,
+                7,
+                12
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                16,
+                10,
+                0
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                3,
+                6,
+                24
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                21,
+                5
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                12,
+                1,
+                13
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                13,
+                9,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                24,
+                0,
+                5
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                8,
+                11,
+                1
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                27,
+                10,
+                24
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                13,
+                20,
+                22
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                27,
+                20,
+                9
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                5,
+                22,
+                3
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 100
+        },
+        {
+            "ReelIndex": [
+                1,
+                14,
+                10
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                6,
+                19,
+                1
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                7,
+                6
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 500
+        },
+        {
+            "ReelIndex": [
+                13,
+                20,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                7,
+                13,
+                10
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                9,
+                10,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                0,
+                17,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                14,
+                15,
+                4
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                8,
+                0,
+                13
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                0,
+                1,
+                12
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                20,
+                14
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                18,
+                17,
+                22
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                8,
+                9,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                0,
+                18,
+                4
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                20,
+                19,
+                22
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                2,
+                11,
+                14
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                18,
+                0,
+                14
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                1,
+                22,
+                21
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                13,
+                6,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                16,
+                4,
+                23
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                11,
+                10,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                14,
+                1,
+                4
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                15,
+                7,
+                23
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                7,
+                23
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                13,
+                8,
+                13
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                4,
+                17
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                16,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                18,
+                7,
+                24
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                6,
+                13,
+                24
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                24,
+                8,
+                1
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                16,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                3,
+                16,
+                14
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                1,
+                8,
+                0
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                18,
+                4,
+                12
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                5,
+                14,
+                1
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                21,
+                6,
+                12
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                3,
+                15,
+                10
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                7,
+                12,
+                0
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                3,
+                16,
+                20
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                24,
+                0,
+                15
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                11,
+                22,
+                4
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                14,
+                2,
+                2
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                13,
+                3
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                25,
+                20,
+                19
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                12,
+                22,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                27,
+                17,
+                22
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                11,
+                9,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                11,
+                1,
+                5
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                18,
+                8,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                1,
+                8,
+                2
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 100
+        },
+        {
+            "ReelIndex": [
+                23,
+                5,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                3,
+                0,
+                1
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                22,
+                13,
+                17
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                2,
+                2,
+                8
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                16,
+                11,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                24,
+                16,
+                24
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                2,
+                7,
+                1
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                14,
+                10,
+                9
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                20,
+                20,
+                20
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                21,
+                0,
+                17
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                1,
+                4,
+                11
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                24,
+                11,
+                3
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                22,
+                17,
+                16
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                8,
+                4,
+                3
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                5,
+                9,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                20,
+                3
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                27,
+                20,
+                23
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                22,
+                7,
+                1
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                5,
+                17,
+                10
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                24,
+                21,
+                5
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                25,
+                15,
+                15
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                2,
+                6,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                22,
+                17,
+                6
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                0,
+                1,
+                8
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                26,
+                21,
+                2
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                25,
+                14,
+                17
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                17,
+                15,
+                13
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                16,
+                6,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                23,
+                15,
+                8
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                11,
+                10,
+                8
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                3,
+                12,
+                13
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                16,
+                3,
+                10
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                22,
+                18,
+                23
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                22,
+                20,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                20,
+                14,
+                17
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                13,
+                5,
+                9
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                6,
+                6,
+                10
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                14,
+                5,
+                19
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                22,
+                18,
+                13
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                26,
+                12,
+                21
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                13,
+                11,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                11,
+                21,
+                15
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                1,
+                16,
+                8
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                18,
+                22
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                13,
+                8,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                3,
+                5,
+                14
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                18,
+                17,
+                8
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                9,
+                14,
+                3
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                24,
+                9,
+                8
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                27,
+                13,
+                4
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                6,
+                16,
+                19
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                7,
+                19,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                26,
+                12,
+                16
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                10,
+                15,
+                5
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                27,
+                15,
+                14
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                25,
+                16,
+                11
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                25,
+                16,
+                10
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                25,
+                8,
+                7
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                22,
+                19,
+                15
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                11,
+                21,
+                9
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                21,
+                14,
+                17
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                25,
+                7,
+                18
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                6,
+                13,
+                1
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                26,
+                21,
+                2
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 250
+        },
+        {
+            "ReelIndex": [
+                26,
+                3,
+                4
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                20,
+                21,
+                8
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                19,
+                14,
+                21
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        },
+        {
+            "ReelIndex": [
+                14,
+                11,
+                1
+            ],
+            "ActiveReelCount": 3,
+            "WinAmount": 200
+        },
+        {
+            "ReelIndex": [
+                7,
+                11,
+                20
+            ],
+            "ActiveReelCount": 0,
+            "WinAmount": 0
+        },
+        {
+            "ReelIndex": [
+                18,
+                13,
+                23
+            ],
+            "ActiveReelCount": 2,
+            "WinAmount": 150
+        }
+    ]
+}
