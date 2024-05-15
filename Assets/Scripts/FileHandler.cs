@@ -11,10 +11,8 @@ public static class FileHandler
     {
         var jsonString = ReadFile(GetPath(fileName));
         
-        
         if (string.IsNullOrEmpty(jsonString) || jsonString == "{}")
         {
-           
             return new List<T>();
         }
         return JsonHelper.FromJson<T>(jsonString).ToList();
@@ -24,7 +22,6 @@ public static class FileHandler
     private static string GetPath(string fileName)
     {
         var path = Application.dataPath + "/Scripts/JSON/" + fileName;
-        // Debug.Log(path);
         return path;
     }
 

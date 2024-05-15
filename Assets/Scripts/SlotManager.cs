@@ -3,20 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SlotManager : MonoBehaviour
 {
    
    [SerializeField] private TMP_Text winTxt;
    [SerializeField] private float spinCoolDownTime;
+   [SerializeField] private float spinSlotDelay = 0.05f; 
+   [SerializeField] private Slot[] _slots;
    
-   private Slot[] _slots;
    private bool _isSpinning;
    private float _winAmount;
 
-   private int[] _currentReelIndex; 
-
-   private const string TotalWin = "Total Win: ";
+   private const string TotalWin = "TOTAL WIN: ";
 
    private List<Spins> _spinsList = new List<Spins>();
 
@@ -37,14 +37,17 @@ public class SlotManager : MonoBehaviour
       
       //Reset Win Amount
       winTxt.text = TotalWin;
+      var spinReel = Random.Range(0, _spinsList.Count);
+      
+      _winAmount = _spinsList[spinReel].WinAmount;
 
-      var index = 0;
-      
-      foreach (var slot in _slots)
+      for (var i = 0; i < _slots.Length; i++)
       {
-         slot.StartSpin(index);
+         _slots[i].StartSpin(_spinsList[spinReel].ReelIndex[i], spinSlotDelay);
+         Debug.Log(_spinsList[spinReel].ReelIndex[i]);
       }
-      
+      DisplayWinAmount();
+
    }
 
    private void DisplayWinAmount()
