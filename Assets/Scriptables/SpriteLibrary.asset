@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ea5969919d43cd94063b4fc5ef5c98, type: 3}
+  m_Name: SpriteLibrary
+  m_EditorClassIdentifier: 
+  spriteLibrary:
+  - tag: CLUBS
+    sprite: {fileID: 21300000, guid: 5fe574973fb971041ba61d696c4df58c, type: 3}
+  - tag: DIAMOND
+    sprite: {fileID: 21300000, guid: a34f90c02f76f4c46a88b3be33c58ef2, type: 3}
+  - tag: HEARTS
+    sprite: {fileID: 21300000, guid: 7758f6c7e6c0f85408ddcefb5a1b9796, type: 3}
+  - tag: SPADES
+    sprite: {fileID: 21300000, guid: 457e7cb71b7f1be4c9fbe10a1955de6a, type: 3}
+  defaultSpr: {fileID: 21300000, guid: 457e7cb71b7f1be4c9fbe10a1955de6a, type: 3}
