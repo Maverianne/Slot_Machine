@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 1049293177}
   - component: {fileID: 1049293181}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: SlotManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winTxt: {fileID: 1588107594}
   spriteLibrary: {fileID: 11400000, guid: 31e2eaf5c9cdb8e46b24b861630093e5, type: 2}
-  spinCoolDownTime: 1
+  spinCoolDownTime: 0.2
   spinSpeed: 70
   spinBaseTime: 1
   spinStartIndividualDelay: 0.05

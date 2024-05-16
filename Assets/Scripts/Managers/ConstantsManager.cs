@@ -5,6 +5,7 @@
         public static class Notifications
         {
             public const string StoppedSpinning = "Notifications.StopppedSpinng";
+            public const string WinAnimationFinished = "Notifications.WinAnimationFinished";
         }
 
         public static class TextUI

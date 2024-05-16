@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Managers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements.Experimental;
 
 public class Slot : MonoBehaviour
 {
     [SerializeField] private Transform slotMovement;
     [SerializeField] private int layoutMovementGap;
     [SerializeField] private int middleIndex = 3;
+    [SerializeField] private int animLoopDuration = 5; 
+    [SerializeField] private float blinkDuration = 0.3f; 
     
     private Vector3 _slotMovementStarPos;
     
@@ -20,12 +25,16 @@ public class Slot : MonoBehaviour
     private bool _listeningForNotifications; 
     private bool _isSpinning; 
     private bool _canStop;
+    private bool _winnerIsVisible;
     
     private float _spinSpeed;
     private float _spinSpeedMultiplier = 1f;
+    private float _startAnimTimeStamp;
     
     private List<string> _reelStrip;
     private LinkedList<Image> _imgList;
+
+    private bool IsAnimationRunning => Time.unscaledTime < _startAnimTimeStamp + animLoopDuration;
 
 
     private void Awake()
@@ -51,12 +60,12 @@ public class Slot : MonoBehaviour
 
     public void StartSpin(int index, float delay)
     {
+        //TODO: check results with prints (weird cases)
        _destinationIndex = index;
        _canStop = false;
        _isSpinning = true;
        _spinSpeedMultiplier = 1;
        StartCoroutine(PerformSpin(delay));
-       // Debug.Log("Winner must be: " + _reelStrip[_destinationIndex]);
    }
 
    private IEnumerator PerformSpin(float delay)
@@ -70,7 +79,7 @@ public class Slot : MonoBehaviour
            
            yield return null;
        }
-       // Debug.Log("Middle Index is: " + _reelStrip[middleIndex]);
+       
        EventListener.TriggerEvent(ConstantsManager.Notifications.StoppedSpinning);
    }
    
@@ -110,6 +119,52 @@ public class Slot : MonoBehaviour
    private void AccelerateSpin()
    {
        _spinSpeedMultiplier += 0.5f;
+   }
+
+   public void AnimateReel()
+   {
+       _startAnimTimeStamp = Time.unscaledTime;
+       _winnerIsVisible = false;
+       StartCoroutine(PerformFade(false, blinkDuration));
+   }
+
+   private void CheckAnimReelPhase()
+   {
+       if (!IsAnimationRunning)
+       {
+           if (!_winnerIsVisible)
+           {
+               //In case the loop ended but the image didn't end as visible
+               StartCoroutine(PerformFade(!_winnerIsVisible, blinkDuration));
+               _winnerIsVisible = !_winnerIsVisible;
+               return;
+           }
+           EventListener.TriggerEvent(ConstantsManager.Notifications.WinAnimationFinished);
+           return;
+       }
+
+       StartCoroutine(PerformFade(!_winnerIsVisible, blinkDuration));
+       _winnerIsVisible = !_winnerIsVisible;
+   }
+   
+   private IEnumerator PerformFade(bool fadeIn, float duration) 
+   {
+       var timer = 0f;
+       var winningImage = _imgList.ElementAt(2);
+       var startingColor = winningImage.color;
+       var targetAlpha = fadeIn ? 1 : 0;
+
+       while (timer < duration) {
+           timer += Time.deltaTime;
+           var progress = Mathf.Clamp01(timer / duration);
+           progress = Easing.InOutQuad(progress);
+
+           var targetColorAlphaOnly = startingColor;
+           targetColorAlphaOnly.a = Mathf.Lerp(startingColor.a, targetAlpha, progress);
+           winningImage.color = targetColorAlphaOnly;
+           yield return null;
+       }
+       CheckAnimReelPhase();
    }
    
    private void RegisterNotifications(bool register)

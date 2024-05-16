@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 namespace Managers
@@ -14,7 +13,6 @@ namespace Managers
       [SerializeField] private TMP_Text winTxt;
       [SerializeField] private SpriteLibrary spriteLibrary;
 
-
       [SerializeField] private float spinCoolDownTime;
       [SerializeField] private float spinSpeed = 70f;
       [SerializeField] private float spinBaseTime = 1f;
@@ -24,7 +22,8 @@ namespace Managers
       private bool _listeningForNotifications; 
       private bool _isSpinning;
 
-      private int _currentSlot; 
+      private int _currentSlot;
+      private int _currenReelCount; 
       private float _winAmount;
 
       private Slot[] _slots;
@@ -62,6 +61,9 @@ namespace Managers
          
          var spinReel = Random.Range(0, _spinsList.Count);
          _winAmount = _spinsList[spinReel].WinAmount;
+         _currenReelCount = _spinsList[spinReel].ActiveReelCount;
+         
+         Debug.Log("Active reel count: " + _currenReelCount);
 
          for (var i = 0; i < _slots.Length; i++)
          {
@@ -70,16 +72,31 @@ namespace Managers
          StartCoroutine(PerformSpinStop(spinBaseTime));
       }
 
-      private void DisplayWinAmount()
-      {
-         winTxt.text = ConstantsManager.TextUI.TotalWin + _winAmount;
-         StartCoroutine(PerformCoolDown());
-      }
-
       private void CheckStopNextSlot()
       {
          if (_currentSlot < _slots.Length) StartCoroutine(PerformSpinStop(spinStopIndividualDelay));
          else DisplayWinAmount();
+      }
+      
+      private void DisplayWinAmount()
+      {
+         winTxt.text = ConstantsManager.TextUI.TotalWin + _winAmount;
+         if (_currenReelCount == 0)
+         {
+            CoolDownSpin();
+         }
+         else
+         {
+            for (var i = 0; i < _currenReelCount; i++)
+            {
+               _slots[i].AnimateReel();
+            }
+         }
+      }
+
+      private void CoolDownSpin()
+      {
+         StartCoroutine(PerformCoolDown());
       }
    
       private void RegisterNotifications(bool register)
@@ -89,12 +106,14 @@ namespace Managers
             if(_listeningForNotifications) return;
             _listeningForNotifications = true;
             EventListener.StartListening(ConstantsManager.Notifications.StoppedSpinning, CheckStopNextSlot);
+            EventListener.StartListening(ConstantsManager.Notifications.WinAnimationFinished, CoolDownSpin);
          }
          else
          {
             if(!_listeningForNotifications) return;
             _listeningForNotifications = false;
             EventListener.StopListening(ConstantsManager.Notifications.StoppedSpinning, CheckStopNextSlot);
+            EventListener.StopListening(ConstantsManager.Notifications.WinAnimationFinished, CoolDownSpin);
          }
       }
 
@@ -105,7 +124,6 @@ namespace Managers
          _currentSlot++;
       }
 
- 
       private IEnumerator PerformCoolDown()
       {
          yield return new WaitForSeconds(spinCoolDownTime);
