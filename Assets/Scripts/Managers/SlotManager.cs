@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Managers
@@ -26,6 +27,7 @@ namespace Managers
       private int _currenReelCount; 
       private float _winAmount;
 
+      private Button _spinBtn;
       private Slot[] _slots;
       private List<Spins> _spinsList = new List<Spins>();
       private List<List<string>> _reelStripList = new List<List<string>>();
@@ -37,6 +39,7 @@ namespace Managers
       {
          _slots = GetComponentsInChildren<Slot>();
          RegisterNotifications(true);
+         _spinBtn = GetComponentInChildren<Button>();
       }
 
       private void Start()
@@ -55,23 +58,27 @@ namespace Managers
       {
          if(_isSpinning) return;
          _isSpinning = true;
-      
+         _spinBtn.interactable = false;
+         
          //Reset Win Amount
          winTxt.text = ConstantsManager.TextUI.TotalWin;
          
+         //Get/set spin info and start spin
          var spinReel = Random.Range(0, _spinsList.Count);
          _winAmount = _spinsList[spinReel].WinAmount;
          _currenReelCount = _spinsList[spinReel].ActiveReelCount;
-         
-         Debug.Log("Active reel count: " + _currenReelCount);
+
 
          for (var i = 0; i < _slots.Length; i++)
          {
             _slots[i].StartSpin(_spinsList[spinReel].ReelIndex[i], spinStartIndividualDelay);
          }
+         
+         
          StartCoroutine(PerformSpinStop(spinBaseTime));
       }
-
+      
+      
       private void CheckStopNextSlot()
       {
          if (_currentSlot < _slots.Length) StartCoroutine(PerformSpinStop(spinStopIndividualDelay));
@@ -127,6 +134,7 @@ namespace Managers
       private IEnumerator PerformCoolDown()
       {
          yield return new WaitForSeconds(spinCoolDownTime);
+         _spinBtn.interactable = true;
          _isSpinning = false;
          _currentSlot = 0;
       }

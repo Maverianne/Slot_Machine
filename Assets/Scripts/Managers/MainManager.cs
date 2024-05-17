@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Managers
 {
@@ -7,6 +8,8 @@ namespace Managers
         public static MainManager Instance { get; private set; }
         
         public SlotManager SlotManager { get; private set; }
+
+        private bool _isExiting;
 
         private void Awake()
         {
@@ -17,6 +20,19 @@ namespace Managers
                 return;
             }
             SlotManager = FindObjectOfType<SlotManager>();
+        }
+
+        
+        public void ExitGame(InputAction.CallbackContext context)
+        {
+            if(_isExiting) return;
+            _isExiting = true;
+            EventListener.ClearAllEvents();
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #else
+            Application.Quit();
+            #endif
         }
     }
 }

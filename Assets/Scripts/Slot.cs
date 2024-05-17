@@ -11,9 +11,8 @@ public class Slot : MonoBehaviour
 {
     [SerializeField] private Transform slotMovement;
     [SerializeField] private int layoutMovementGap;
-    [SerializeField] private int middleIndex = 3;
     [SerializeField] private int animLoopDuration = 5; 
-    [SerializeField] private float blinkDuration = 0.3f; 
+    [SerializeField] private float blinkDuration = 0.3f;
     
     private Vector3 _slotMovementStarPos;
     
@@ -21,6 +20,7 @@ public class Slot : MonoBehaviour
    
     private int _destinationIndex;
     private int _symbolSpinIndex;
+    private int _middleIndex = 3;
 
     private bool _listeningForNotifications; 
     private bool _isSpinning; 
@@ -60,7 +60,6 @@ public class Slot : MonoBehaviour
 
     public void StartSpin(int index, float delay)
     {
-        //TODO: check results with prints (weird cases)
        _destinationIndex = index;
        _canStop = false;
        _isSpinning = true;
@@ -68,40 +67,25 @@ public class Slot : MonoBehaviour
        StartCoroutine(PerformSpin(delay));
    }
 
-   private IEnumerator PerformSpin(float delay)
+    private void AssignLastSymbol()
    {
-       yield return new WaitForSeconds(delay);
-       var slotMovementDes = new Vector3(_slotMovementStarPos.x, _slotMovementStarPos.y - layoutMovementGap, _slotMovementStarPos.z);
-       while (_isSpinning)
-       {
-           slotMovement.position = Vector3.MoveTowards(slotMovement.position, slotMovementDes,  (_spinSpeed *_spinSpeedMultiplier) * 100 * Time.deltaTime);
-           if (slotMovement.position.y <= slotMovementDes.y) AssignLastSymbol();
-           
-           yield return null;
-       }
-       
-       EventListener.TriggerEvent(ConstantsManager.Notifications.StoppedSpinning);
-   }
-   
-
-   private void AssignLastSymbol()
-   {
+       //Updating the index and the sprites on the reel
        slotMovement.GetChild(slotMovement.childCount - 1).SetAsFirstSibling();
        _imgList.Last.Value.sprite = MainManager.Instance.SlotManager.SpriteLibrary.GetSprite(_reelStrip[_symbolSpinIndex]);
         PopList();
-
+        
         slotMovement.position = _slotMovementStarPos;
        
-       if (middleIndex == _destinationIndex && _canStop)
+       if (_middleIndex == _destinationIndex && _canStop)
        {
            _isSpinning = false;
            return;
        }
        
+       _middleIndex++;
+       if (_middleIndex == _reelStrip.Count ) _middleIndex = 0;
        _symbolSpinIndex++;
-       middleIndex++;
-       if (_symbolSpinIndex > _reelStrip.Count - 1) _symbolSpinIndex = 0;
-       if (middleIndex > _reelStrip.Count - 1) middleIndex = 0;
+       if (_symbolSpinIndex == _reelStrip.Count) _symbolSpinIndex = 0;
    }
    
    private void PopList()
@@ -118,6 +102,7 @@ public class Slot : MonoBehaviour
 
    private void AccelerateSpin()
    {
+       //Just thought it would feel better if the reels sped up after each stop 
        _spinSpeedMultiplier += 0.5f;
    }
 
@@ -128,13 +113,13 @@ public class Slot : MonoBehaviour
        StartCoroutine(PerformFade(false, blinkDuration));
    }
 
-   private void CheckAnimReelPhase()
+   private void CheckAnimReelLoopPhase()
    {
        if (!IsAnimationRunning)
        {
            if (!_winnerIsVisible)
            {
-               //In case the loop ended but the image didn't end as visible
+               //In case the loop ends but the image isn't visible
                StartCoroutine(PerformFade(!_winnerIsVisible, blinkDuration));
                _winnerIsVisible = !_winnerIsVisible;
                return;
@@ -145,6 +130,22 @@ public class Slot : MonoBehaviour
 
        StartCoroutine(PerformFade(!_winnerIsVisible, blinkDuration));
        _winnerIsVisible = !_winnerIsVisible;
+   }
+   
+   private void RegisterNotifications(bool register)
+   {
+       if (register)
+       {
+           if(_listeningForNotifications) return;
+           _listeningForNotifications = true;
+           EventListener.StartListening(ConstantsManager.Notifications.StoppedSpinning, AccelerateSpin);
+       }
+       else
+       {
+           if(!_listeningForNotifications) return;
+           _listeningForNotifications = false;
+           EventListener.StopListening(ConstantsManager.Notifications.StoppedSpinning, AccelerateSpin);
+       }
    }
    
    private IEnumerator PerformFade(bool fadeIn, float duration) 
@@ -164,22 +165,22 @@ public class Slot : MonoBehaviour
            winningImage.color = targetColorAlphaOnly;
            yield return null;
        }
-       CheckAnimReelPhase();
+       CheckAnimReelLoopPhase();
    }
    
-   private void RegisterNotifications(bool register)
+   private IEnumerator PerformSpin(float delay)
    {
-       if (register)
+       yield return new WaitForSeconds(delay);
+       var slotMovementDes = new Vector3(_slotMovementStarPos.x, _slotMovementStarPos.y - layoutMovementGap, _slotMovementStarPos.z);
+       while (_isSpinning)
        {
-           if(_listeningForNotifications) return;
-           _listeningForNotifications = true;
-           EventListener.StartListening(ConstantsManager.Notifications.StoppedSpinning, AccelerateSpin);
+           slotMovement.position = Vector3.MoveTowards(slotMovement.position, slotMovementDes,  (_spinSpeed *_spinSpeedMultiplier) * 100 * Time.deltaTime);
+           if (slotMovement.position.y <= slotMovementDes.y) AssignLastSymbol();
+           
+           yield return null;
        }
-       else
-       {
-           if(!_listeningForNotifications) return;
-           _listeningForNotifications = false;
-           EventListener.StopListening(ConstantsManager.Notifications.StoppedSpinning, AccelerateSpin);
-       }
+       
+       EventListener.TriggerEvent(ConstantsManager.Notifications.StoppedSpinning);
    }
+
 }
