@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using Task = System.Threading.Tasks.Task;
 
 namespace Managers
 {
@@ -29,8 +30,8 @@ namespace Managers
 
       private Button _spinBtn;
       private Slot[] _slots;
-      private List<Spins> _spinsList = new List<Spins>();
-      private List<List<string>> _reelStripList = new List<List<string>>();
+      private List<Spins> _spinsList = new ();
+      private List<List<string>> _reelStripList = new ();
 
       public SpriteLibrary SpriteLibrary => spriteLibrary;
 
@@ -38,20 +39,24 @@ namespace Managers
       private void Awake()
       {
          _slots = GetComponentsInChildren<Slot>();
-         RegisterNotifications(true);
          _spinBtn = GetComponentInChildren<Button>();
       }
 
-      private void Start()
+      private async void Start()
       {
-         _spinsList = FileHandler.ReadFromJsonList<Spins>(ConstantsManager.Files.Spins);
-         _reelStripList =  FileHandler.ReadFromJson<string>(ConstantsManager.Files.ReelStrips);
-         
+         await LoadJsonData();
+         RegisterNotifications(true);
          for (var i = 0; i < _slots.Length; i++)
          {
             _slots[i].SetUpSlot(spinSpeed, _reelStripList[i]);
          }
-         
+      }
+
+      private Task LoadJsonData()
+      {
+         _spinsList = FileHandler.ReadFromJsonList<Spins>(ConstantsManager.Files.Spins);
+         _reelStripList =  FileHandler.ReadFromJson<string>(ConstantsManager.Files.ReelStrips);
+         return Task.CompletedTask;
       }
 
       public void SpinSlots()
@@ -67,7 +72,6 @@ namespace Managers
          var spinReel = Random.Range(0, _spinsList.Count);
          _winAmount = _spinsList[spinReel].WinAmount;
          _currenReelCount = _spinsList[spinReel].ActiveReelCount;
-
 
          for (var i = 0; i < _slots.Length; i++)
          {
@@ -88,6 +92,8 @@ namespace Managers
       private void DisplayWinAmount()
       {
          winTxt.text = ConstantsManager.TextUI.TotalWin + _winAmount;
+         
+         // If there's animation, animate symbols. If not, go directly to cool down and reset spin
          if (_currenReelCount == 0)
          {
             CoolDownSpin();

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Managers;
 using Newtonsoft.Json;
@@ -10,7 +9,7 @@ public static class FileHandler
 {
     public static List<T> ReadFromJsonList<T>(string fileName)
     {
-        var jsonString = ReadFile(GetPath(fileName));
+        var jsonString = Resources.Load(ConstantsManager.Files.JsonPath + fileName).ToString();
         
         if (string.IsNullOrEmpty(jsonString) || jsonString == "{}") return new List<T>();
         
@@ -19,25 +18,17 @@ public static class FileHandler
     
     public static List<List<T>> ReadFromJson<T>(string fileName)
     {
-        var jsonString = ReadFile(GetPath(fileName));
+        var jsonString = Resources.Load(ConstantsManager.Files.JsonPath + fileName).ToString();
         
         if (string.IsNullOrEmpty(jsonString) || jsonString == "{}") return new List<List<T>>();
         
         return JsonHelper.GetJsonArrayStrips<T>(jsonString);
     }
 
-    private static string GetPath(string fileName)
+    public static string GetPath(string fileName)
     {
         var path = Application.dataPath + ConstantsManager.Files.JsonPath + fileName;
         return path;
-    }
-
-    private static string ReadFile(string path)
-    {
-        if (!File.Exists(path)) return "";
-        using StreamReader reader = new StreamReader(path);
-        var jsonString = reader.ReadToEnd();
-        return jsonString;
     }
 
     public static class JsonHelper

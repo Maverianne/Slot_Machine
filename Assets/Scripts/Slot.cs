@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Managers;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements.Experimental;
@@ -46,6 +45,7 @@ public class Slot : MonoBehaviour
 
     public void SetUpSlot(float spinSpeed, List<string> reelStrip)
     {
+        _images ??= slotMovement.GetComponentsInChildren<Image>();
         _spinSpeed = spinSpeed;
         _reelStrip = reelStrip;
 
