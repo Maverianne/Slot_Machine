@@ -25,14 +25,19 @@ namespace Managers
         
         public void ExitGame(InputAction.CallbackContext context)
         {
+            ExitGame();
+        }
+
+        public void ExitGame()
+        {
             if(_isExiting) return;
             _isExiting = true;
             SlotManager.RegisterNotifications(false);
             EventListener.ClearAllEvents();
             #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
+                UnityEditor.EditorApplication.isPlaying = false;
             #else
-            Application.Quit();
+                Application.Quit();
             #endif
         }
     }
