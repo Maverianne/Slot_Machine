@@ -27,6 +27,7 @@ namespace Managers
         {
             if(_isExiting) return;
             _isExiting = true;
+            SlotManager.RegisterNotifications(false);
             EventListener.ClearAllEvents();
             #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

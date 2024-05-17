@@ -112,7 +112,7 @@ namespace Managers
          StartCoroutine(PerformCoolDown());
       }
    
-      private void RegisterNotifications(bool register)
+      public void RegisterNotifications(bool register)
       {
          if (register)
          {
