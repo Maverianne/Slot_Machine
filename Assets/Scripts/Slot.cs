@@ -38,7 +38,7 @@ public class Slot : MonoBehaviour
 
     private void Awake()
     {
-        _slotMovementStarPos = slotMovement.position;
+        _slotMovementStarPos = slotMovement.localPosition;
         RegisterNotifications(true);
         _images = slotMovement.GetComponentsInChildren<Image>();
     }
@@ -74,7 +74,7 @@ public class Slot : MonoBehaviour
        _imgList.Last.Value.sprite = MainManager.Instance.SlotManager.SpriteLibrary.GetSprite(_reelStrip[_symbolSpinIndex]);
         PopList();
         
-        slotMovement.position = _slotMovementStarPos;
+        slotMovement.localPosition = _slotMovementStarPos;
        
        if (_middleIndex == _destinationIndex && _canStop)
        {
@@ -174,8 +174,8 @@ public class Slot : MonoBehaviour
        var slotMovementDes = new Vector3(_slotMovementStarPos.x, _slotMovementStarPos.y - layoutMovementGap, _slotMovementStarPos.z);
        while (_isSpinning)
        {
-           slotMovement.position = Vector3.MoveTowards(slotMovement.position, slotMovementDes,  (_spinSpeed *_spinSpeedMultiplier) * 100 * Time.deltaTime);
-           if (slotMovement.position.y <= slotMovementDes.y) AssignLastSymbol();
+           slotMovement.localPosition = Vector3.MoveTowards(slotMovement.localPosition, slotMovementDes,  (_spinSpeed *_spinSpeedMultiplier) * 100 * Time.deltaTime);
+           if (slotMovement.localPosition.y <= slotMovementDes.y) AssignLastSymbol();
            
            yield return null;
        }
